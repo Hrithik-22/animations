@@ -1,10 +1,10 @@
 import { createNativeStackNavigator, NativeStackScreenProps } from '@react-navigation/native-stack';
-import Home from '../screens/Home';
+import Home, { Product } from '../screens/Home';
 import Details from '../screens/Details';
 
 type RootStackParamList = {
     Home: undefined;
-    Details: { item: null };
+    Details: { item: Product };
 }
 const RootStack = createNativeStackNavigator<RootStackParamList>();
 export type HomePageProps = NativeStackScreenProps<RootStackParamList, 'Home'>;
